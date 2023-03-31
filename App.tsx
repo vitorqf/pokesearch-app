@@ -1,25 +1,38 @@
-import { StatusBar } from 'expo-status-bar'
-import { StyleSheet, Text, View } from 'react-native'
+import {
+  Poppins_400Regular,
+  Poppins_500Medium,
+  Poppins_700Bold,
+  Poppins_900Black,
+} from '@expo-google-fonts/poppins'
+import { useFonts } from 'expo-font'
+import { SafeAreaProvider } from 'react-native-safe-area-context/'
 import { ThemeProvider } from 'styled-components'
+import { Splash } from './src/components/Splash'
 
-import { theme } from './styles/theme'
+import { Routes } from './src/routes'
+import theme from './src/styles/theme'
 
 export default function App(): React.ReactNode {
+  const [fontsLoaded] = useFonts({
+    Poppins_900Black,
+    Poppins_400Regular,
+    Poppins_700Bold,
+    Poppins_500Medium,
+  })
+
+  if (fontsLoaded) {
+    return (
+      <ThemeProvider theme={theme}>
+        <Splash />
+      </ThemeProvider>
+    )
+  }
+
   return (
     <ThemeProvider theme={theme}>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <StatusBar style='auto' />
-      </View>
+      <SafeAreaProvider>
+        <Routes />
+      </SafeAreaProvider>
     </ThemeProvider>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})

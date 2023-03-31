@@ -7,5 +7,6 @@
   "trailingComma": "es5",
   "semi": false,
   "quoteProps": "as-needed",
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "plugins": ["prettier-plugin-style-order"]
 }

@@ -1,7 +1,8 @@
-export const theme = {
+const theme = {
   colors: {
     background: '#f5f5f5',
     gray100: '#F1F5F9',
+    gray200: '#C8C8C8',
     badge: {
       colors: {
         water: '#6890F0',
@@ -25,4 +26,21 @@ export const theme = {
       },
     },
   },
+  fontSizes: {
+    small: '12px',
+    medium: '14px',
+    large: '16px',
+    x_large: '18px',
+    x2_large: '20px',
+    x3_large: '24px',
+    x4_large: '32px',
+    x5_large: '40px',
+  },
+  fontWeight: {
+    regular: '400',
+    medium: '500',
+    bold: '700',
+  },
 }
+
+export default theme
