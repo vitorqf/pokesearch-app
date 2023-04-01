@@ -1,6 +1,12 @@
 import React from 'react'
-import { Container } from './styles'
 
-export function TypeBadge() {
-  return <Container></Container>
+import { Type } from '../../@types/pokemon'
+import { Container, TypeText } from './styles'
+
+export function TypeBadge({ type, slot }: Type) {
+  return (
+    <Container>
+      <TypeText type={type.name}>{type.name}</TypeText>
+    </Container>
+  )
 }

@@ -11,7 +11,7 @@ export function Home() {
   const [pokemons, setPokemons] = useState<Species[]>([])
 
   function fetchPokemonAPI() {
-    api.get('pokemon?limit=5').then(response => {
+    api.get('pokemon?limit=10').then(response => {
       setPokemons(response.data.results)
     })
   }
@@ -27,6 +27,11 @@ export function Home() {
         data={pokemons}
         keyExtractor={pokemon => pokemon.name}
         renderItem={({ item }) => <PokeCard data={item} />}
+        numColumns={2}
+        style={{
+          paddingHorizontal: 14,
+          gap: 4,
+        }}
       />
     </Container>
   )

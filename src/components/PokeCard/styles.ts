@@ -1,10 +1,12 @@
 import styled from 'styled-components/native'
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
+  flex: 1;
   flex-direction: column;
 `
 
 export const Header = styled.View`
+  width: 100%;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -23,13 +25,28 @@ export const PokeId = styled.Text`
 
 export const PokeCardContainer = styled.View`
   background-color: #fff;
-  padding: 6px 12px;
+  padding: 8px 12px;
   border-radius: 10px;
-  margin: 0px 16px;
+  margin: 6px 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 `
 
 export const TypesContainer = styled.View`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 4px;
+`
+
+export const ViewDetailsContainer = styled.View`
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const ViewDetailsText = styled.Text`
+  font-size: ${({ theme }) => theme.fontSizes.large};
 `
