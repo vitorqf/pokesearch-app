@@ -20,7 +20,7 @@ export default function App(): React.ReactNode {
     Poppins_500Medium,
   })
 
-  if (fontsLoaded) {
+  if (!fontsLoaded) {
     return (
       <ThemeProvider theme={theme}>
         <Splash />

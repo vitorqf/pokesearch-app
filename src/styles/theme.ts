@@ -3,6 +3,9 @@ const theme = {
     background: '#f5f5f5',
     gray100: '#F1F5F9',
     gray200: '#C8C8C8',
+    slate: {
+      400: '#94A3B8',
+    },
     badge: {
       colors: {
         water: '#6890F0',
